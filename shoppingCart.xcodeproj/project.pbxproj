@@ -12,6 +12,9 @@
 		F51119C31C6067C90081E12B /* NoDiscountStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51119C21C6067C90081E12B /* NoDiscountStrategy.swift */; };
 		F51119C51C6069570081E12B /* FlatRateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51119C41C6069570081E12B /* FlatRateStrategy.swift */; };
 		F51119D51C606B300081E12B /* PercentageStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51119D41C606B300081E12B /* PercentageStrategy.swift */; };
+		F51C09FA1C61A20C00581851 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51C09F91C61A20C00581851 /* BuyViewController.swift */; };
+		F51C09FC1C61A25100581851 /* AddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51C09FB1C61A25100581851 /* AddBookViewController.swift */; };
+		F51C09FE1C61A27500581851 /* AddStrategyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51C09FD1C61A27500581851 /* AddStrategyViewController.swift */; };
 		F549D6201C6046F300D70153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549D61F1C6046F300D70153 /* AppDelegate.swift */; };
 		F549D6221C6046F300D70153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549D6211C6046F300D70153 /* ViewController.swift */; };
 		F549D6241C6046F300D70153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F549D6231C6046F300D70153 /* Assets.xcassets */; };
@@ -49,6 +52,9 @@
 		F51119C21C6067C90081E12B /* NoDiscountStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDiscountStrategy.swift; sourceTree = "<group>"; };
 		F51119C41C6069570081E12B /* FlatRateStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlatRateStrategy.swift; sourceTree = "<group>"; };
 		F51119D41C606B300081E12B /* PercentageStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageStrategy.swift; sourceTree = "<group>"; };
+		F51C09F91C61A20C00581851 /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		F51C09FB1C61A25100581851 /* AddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBookViewController.swift; sourceTree = "<group>"; };
+		F51C09FD1C61A27500581851 /* AddStrategyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddStrategyViewController.swift; sourceTree = "<group>"; };
 		F549D61C1C6046F300D70153 /* shoppingCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shoppingCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F549D61F1C6046F300D70153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F549D6211C6046F300D70153 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +125,9 @@
 			children = (
 				F549D61F1C6046F300D70153 /* AppDelegate.swift */,
 				F549D6211C6046F300D70153 /* ViewController.swift */,
+				F51C09F91C61A20C00581851 /* BuyViewController.swift */,
+				F51C09FB1C61A25100581851 /* AddBookViewController.swift */,
+				F51C09FD1C61A27500581851 /* AddStrategyViewController.swift */,
 				F51119BC1C6062670081E12B /* IPricingStrategy.swift */,
 				F51119C01C60652F0081E12B /* productSpecification.swift */,
 				F51119C21C6067C90081E12B /* NoDiscountStrategy.swift */,
@@ -286,10 +295,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51119C11C60652F0081E12B /* productSpecification.swift in Sources */,
+				F51C09FC1C61A25100581851 /* AddBookViewController.swift in Sources */,
 				F5C08C7A1C606CCE0088DF0B /* SaleLineItem.swift in Sources */,
 				F51119C51C6069570081E12B /* FlatRateStrategy.swift in Sources */,
 				F5C08C801C6093540088DF0B /* Sale.swift in Sources */,
+				F51C09FE1C61A27500581851 /* AddStrategyViewController.swift in Sources */,
 				F51119BD1C6062670081E12B /* IPricingStrategy.swift in Sources */,
+				F51C09FA1C61A20C00581851 /* BuyViewController.swift in Sources */,
 				F51119D51C606B300081E12B /* PercentageStrategy.swift in Sources */,
 				F549D6221C6046F300D70153 /* ViewController.swift in Sources */,
 				F5C08C841C609DB10088DF0B /* Core.swift in Sources */,

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +642,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="shoppingCart" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -667,15 +668,280 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="shoppingCart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFT-Br-wwT">
+                                <rect key="frame" x="78" y="189" width="87" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="添加新产品" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KGw-qm-wg3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="uGT-h2-xKx" kind="popover" popoverAnchorView="jFT-Br-wwT" popoverBehavior="t" preferredEdge="maxY" id="3if-wJ-1S3"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGC-wq-7CX">
+                                <rect key="frame" x="281" y="184" width="74" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="添加新策略" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fm2-QV-jn9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="0OM-sy-Ar9" kind="popover" popoverAnchorView="lGC-wq-7CX" popoverBehavior="t" preferredEdge="maxY" id="udJ-F3-7Wy"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n92-2J-DbA">
+                                <rect key="frame" x="196" y="81" width="62" height="19"/>
+                                <buttonCell key="cell" type="roundRect" title="购买产品" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="dd7-OW-78t">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="12" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="GLp-oW-Nfd" kind="popover" popoverAnchorView="n92-2J-DbA" popoverBehavior="t" preferredEdge="maxY" id="jS7-FJ-ZuB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Add Strategy View Controller-->
+        <scene sceneID="q4a-eM-y1A">
+            <objects>
+                <viewController id="0OM-sy-Ar9" customClass="AddStrategyViewController" customModule="shoppingCart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="EoJ-dm-xAt">
+                        <rect key="frame" x="0.0" y="0.0" width="380" height="231"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hjd-lA-VES">
+                                <rect key="frame" x="-8" y="-10" width="396" height="247"/>
+                                <font key="font" metaFont="system"/>
+                                <tabViewItems>
+                                    <tabViewItem label="简单策略" identifier="1" id="QMX-Px-iKg">
+                                        <view key="view" ambiguous="YES" id="sSg-2u-3Ef">
+                                            <rect key="frame" x="10" y="33" width="376" height="201"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KzA-0e-NGt">
+                                                    <rect key="frame" x="22" y="162" width="69" height="17"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="策略类型：" id="pPa-Oj-1Qx">
+                                                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o7N-kj-m0B">
+                                                    <rect key="frame" x="97" y="155" width="126" height="26"/>
+                                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" numberOfVisibleItems="3" id="rqf-92-cUK">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        <objectValues>
+                                                            <string>无优惠策略</string>
+                                                            <string>减价优惠策略</string>
+                                                            <string>百分比优惠策略</string>
+                                                        </objectValues>
+                                                        <connections>
+                                                            <action selector="TypeBoxAct:" target="0OM-sy-Ar9" id="Dv2-Qi-7nR"/>
+                                                        </connections>
+                                                    </comboBoxCell>
+                                                </comboBox>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-lw-BHm">
+                                                    <rect key="frame" x="22" y="130" width="69" height="17"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="策略数额：" id="q88-Vp-cPx">
+                                                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NAn-5E-v19">
+                                                    <rect key="frame" x="97" y="125" width="123" height="22"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="dNa-hr-9vA">
+                                                        <numberFormatter key="formatter" formatterBehavior="default10_4" numberStyle="decimal" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="zSB-ep-VcG"/>
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0s2-5w-Zzj">
+                                                    <rect key="frame" x="-1" y="-10" width="66" height="32"/>
+                                                    <buttonCell key="cell" type="push" title="确定" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zap-67-XaB">
+                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                                    </buttonCell>
+                                                    <connections>
+                                                        <action selector="SimpleSubmit:" target="0OM-sy-Ar9" id="uky-Vy-CAk"/>
+                                                    </connections>
+                                                </button>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NoE-eH-cLQ">
+                                                    <rect key="frame" x="22" y="99" width="200" height="17"/>
+                                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="策略应用到哪种类型的产品上？" id="h2E-5a-zZm">
+                                                        <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJZ-e4-xDc">
+                                                    <rect key="frame" x="24" y="67" width="199" height="26"/>
+                                                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="50" id="24O-nj-xvi">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </comboBoxCell>
+                                                </comboBox>
+                                            </subviews>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="复合策略" identifier="2" id="6mX-Ok-2kR">
+                                        <view key="view" id="oMh-ca-owd">
+                                            <rect key="frame" x="10" y="33" width="376" height="201"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                    </tabViewItem>
+                                </tabViewItems>
+                            </tabView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="ItemTypeBox" destination="ZJZ-e4-xDc" id="aTE-1I-Jep"/>
+                        <outlet property="NumLable" destination="gTY-lw-BHm" id="TRB-Ii-2sT"/>
+                        <outlet property="TypeBox" destination="rqf-92-cUK" id="dkR-Ef-Osm"/>
+                        <outlet property="num" destination="NAn-5E-v19" id="Mhr-nN-qxN"/>
+                    </connections>
+                </viewController>
+                <customObject id="Zmi-MY-SjN" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="635.5"/>
+        </scene>
+        <!--Add Book View Controller-->
+        <scene sceneID="FZ3-Eo-z89">
+            <objects>
+                <viewController id="uGT-h2-xKx" customClass="AddBookViewController" customModule="shoppingCart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="naY-bp-2nY">
+                        <rect key="frame" x="0.0" y="0.0" width="187" height="203"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0wo-TL-bLT">
+                                <rect key="frame" x="14" y="13" width="66" height="32"/>
+                                <buttonCell key="cell" type="push" title="确定" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="fyg-1z-0TQ">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="submitted:" target="uGT-h2-xKx" id="K7h-aL-11s"/>
+                                </connections>
+                            </button>
+                            <form verticalHuggingPriority="750" fixedFrame="YES" mode="track" allowsEmptySelection="NO" autorecalculatesCellSize="YES" translatesAutoresizingMaskIntoConstraints="NO" id="thk-IB-dO3">
+                                <rect key="frame" x="20" y="71" width="112" height="112"/>
+                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                <size key="cellSize" width="45.783203125" height="22"/>
+                                <size key="intercellSpacing" width="1" height="8"/>
+                                <formCell key="prototype" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" title="Field:" id="YL9-lq-wOL">
+                                    <font key="font" metaFont="system"/>
+                                    <font key="titleFont" metaFont="system"/>
+                                </formCell>
+                                <cells>
+                                    <column>
+                                        <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" title="价格:" id="uCO-uD-FGj">
+                                            <font key="font" metaFont="system"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </formCell>
+                                        <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" tag="1" title="名称:" id="gml-Eh-8oq">
+                                            <font key="font" metaFont="system"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </formCell>
+                                        <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" title="类型:" id="SKD-Gm-qh8">
+                                            <font key="font" metaFont="system"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </formCell>
+                                        <formCell scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" title="编号:" id="cns-zd-T15">
+                                            <font key="font" metaFont="system"/>
+                                            <font key="titleFont" metaFont="system"/>
+                                        </formCell>
+                                    </column>
+                                </cells>
+                            </form>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="isbn" destination="cns-zd-T15" id="5Hb-au-5a9"/>
+                        <outlet property="name" destination="gml-Eh-8oq" id="vdc-ub-mJY"/>
+                        <outlet property="price" destination="uCO-uD-FGj" id="8kc-Gw-i4v"/>
+                        <outlet property="submit" destination="0wo-TL-bLT" id="eXU-Fa-Erq"/>
+                        <outlet property="type" destination="SKD-Gm-qh8" id="eFq-lU-OsU"/>
+                    </connections>
+                </viewController>
+                <customObject id="pPa-BN-l4e" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="430.5" y="298.5"/>
+        </scene>
+        <!--Buy View Controller-->
+        <scene sceneID="b50-hI-NLI">
+            <objects>
+                <viewController id="GLp-oW-Nfd" customClass="BuyViewController" customModule="shoppingCart" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="lW7-rc-eSQ">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <splitView fixedFrame="YES" arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTQ-Dd-5hx">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" id="WYg-PQ-GS1">
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CMY-aP-A56">
+                                                <rect key="frame" x="162" y="-7" width="66" height="32"/>
+                                                <buttonCell key="cell" type="push" title="购买" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="z4A-zI-4KA">
+                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" size="13" name=".PingFangSC-Regular"/>
+                                                </buttonCell>
+                                            </button>
+                                        </subviews>
+                                    </customView>
+                                    <customView fixedFrame="YES" id="g2k-xF-alq">
+                                        <rect key="frame" x="232" y="0.0" width="218" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <scrollView fixedFrame="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwG-xw-7zC">
+                                                <rect key="frame" x="0.0" y="0.0" width="218" height="300"/>
+                                                <clipView key="contentView" ambiguous="YES" id="lIi-u5-uBO">
+                                                    <rect key="frame" x="1" y="1" width="201" height="283"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9g-ji-tRM">
+                                                            <rect key="frame" x="0.0" y="204" width="166" height="79"/>
+                                                        </view>
+                                                    </subviews>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" verticalHuggingPriority="750" horizontal="YES" id="cwu-Jg-hGH">
+                                                    <rect key="frame" x="1" y="284" width="201" height="15"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="KAV-Xb-fhg">
+                                                    <rect key="frame" x="202" y="1" width="15" height="283"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                            </splitView>
+                        </subviews>
+                    </view>
+                </viewController>
+                <customObject id="xW3-Ht-FzM" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="250"/>
         </scene>
     </scenes>
 </document>

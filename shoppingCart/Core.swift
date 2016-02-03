@@ -7,10 +7,11 @@
 //
 
 import Foundation
-class core {
+class Core {
     private var books : [productSpecification]
     private var sales : Sale
-    init(){
+    static let sharedInstance = Core()
+    private init(){
         books = [productSpecification]()
         sales = Sale()
     }
@@ -38,7 +39,7 @@ class core {
     func deleteStrategy(type : String){
         PricingStrategyFactory.sharedInstance.strategies.removeValueForKey(type)
     }
-    func getBook(isbn : String)->productSpecification?{
+    func getBookByIsbn(isbn : String)->productSpecification?{
         for book in books{
             if (book.isbn == isbn){
                 return book
@@ -46,9 +47,27 @@ class core {
         }
         return nil
     }
-    func buyBook(num : Int8, isbn : String){
-        if ((getBook(isbn)) != nil) {
-            sales.addItem(SaleLineItem(copies: num, prodSpec: getBook(isbn)!))
+    func getTypes()->[String]{
+        var tmp = [String]()
+        for book in books{
+            var flag = true
+            for type in tmp{
+                if book.type == type{
+                    flag = false
+                }
+            }
+            if flag == true {
+                tmp.append(book.type)
+            }
+        }
+        return tmp
+    }
+    func buyBook(num : Int8, isbn : String)->Bool{
+        if ((getBookByIsbn(isbn)) != nil) {
+            sales.addItem(SaleLineItem(copies: num, prodSpec: getBookByIsbn(isbn)!))
+            return true
+        }else {
+            return false
         }
     }
 }
