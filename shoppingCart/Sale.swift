@@ -8,7 +8,7 @@
 
 import Foundation
 class Sale {
-    private var items : [SaleLineItem]
+    var items : [SaleLineItem]
     init(){
         items = [SaleLineItem]()
     }
@@ -16,8 +16,9 @@ class Sale {
         var index = 0
         for item in items{
             index++
-            if (item === i){
-                items.removeAtIndex(index)
+            if item.prodSpec.isbn == i.prodSpec.isbn {
+                item.copies += i.copies
+                return
             }
         }
         items.append(i)

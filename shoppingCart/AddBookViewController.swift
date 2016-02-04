@@ -29,11 +29,17 @@ class AddBookViewController: NSViewController {
         }
     }
     @IBAction func submitted(sender: NSButton) {
-        if (Double(self.price.stringValue) != nil) || (self.name.stringValue != "") || (self.type.stringValue != "") || (self.isbn.stringValue != ""){
+        if let _ = Double(self.price.stringValue){
+        if (self.name.stringValue != "") || (self.type.stringValue != "") || (self.isbn.stringValue != ""){
             Core.sharedInstance.addBook(Double(self.price.stringValue)!,title: self.name.stringValue, type: self.type.stringValue,isbn: self.isbn.stringValue)
             let a = NSAlert()
             a.messageText = "添加成功！"
             a.runModal()
+        }else{
+            let a = NSAlert()
+            a.messageText = "您的输入有误，无法添加！"
+            a.runModal()
+            }
         }else{
             let a = NSAlert()
             a.messageText = "您的输入有误，无法添加！"

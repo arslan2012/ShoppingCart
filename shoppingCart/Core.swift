@@ -8,8 +8,8 @@
 
 import Foundation
 class Core {
-    private var books : [productSpecification]
-    private var sales : Sale
+    var books : [productSpecification]
+    var sales : Sale
     static let sharedInstance = Core()
     private init(){
         books = [productSpecification]()
@@ -21,19 +21,19 @@ class Core {
     func addCompositeStrategy(type : String,strategies : [IPricingStrategy]){
         PricingStrategyFactory.sharedInstance.strategies[type] = CompositeBestForCustomer(strategies: strategies)
     }
-    func addSimpleStrategy(type : String, stattype : String, discount : Int8){
+    func addSimpleStrategy(type : String, stattype : String, discount : Int8)->Bool{
         switch(stattype){
-        case "PercentageStrategy":
+        case "百分比优惠策略":
             PricingStrategyFactory.sharedInstance.strategies[type] = PercentageStrategy(discount: discount)
-            break
-        case "FlatRateStrategy":
+            return true
+        case "减价优惠策略":
             PricingStrategyFactory.sharedInstance.strategies[type] = FlatRateStrategy(discount: discount)
-            break
-        case "NoDiscountStrategy":
+            return true
+        case "无优惠策略":
             PricingStrategyFactory.sharedInstance.strategies[type] = NoDiscountStrategy()
-            break
+            return true
         default:
-            break
+            return false
         }
     }
     func deleteStrategy(type : String){

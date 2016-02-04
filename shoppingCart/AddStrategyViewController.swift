@@ -23,7 +23,11 @@ class AddStrategyViewController: NSViewController {
         }
     }
     @IBAction func SimpleSubmit(sender: NSButton) {
-        Core.sharedInstance.addSimpleStrategy(ItemTypeBox.stringValue, stattype: TypeBox.stringValue, discount: Int8(num.stringValue)!)
+        if TypeBox.stringValue == "无优惠策略" {
+            Core.sharedInstance.addSimpleStrategy(ItemTypeBox.stringValue, stattype: TypeBox.stringValue, discount: 0)
+        }else{
+            Core.sharedInstance.addSimpleStrategy(ItemTypeBox.stringValue, stattype: TypeBox.stringValue, discount: Int8(num.stringValue)!)
+        }
     }
     
     override func viewDidLoad() {
