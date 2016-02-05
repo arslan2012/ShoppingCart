@@ -15,4 +15,7 @@ class PercentageStrategy: IPricingStrategy {
     func getSubTotal(i: SaleLineItem) -> Double {
         return Double(i.copies)*i.prodSpec.price*(100-Double(discountPercentage))/100
     }
+    func isKindOfClass() ->String{
+        return "百分比优惠策略"
+    }
 }

@@ -15,6 +15,8 @@ class BuyViewController: NSViewController, NSTableViewDelegate, NSTableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ShoppingCartTable.reloadData()
+        PriceSum.stringValue = "总价:"+String(Core.sharedInstance.sales.getTotal())
         BuyTable.setDataSource(self)
         BuyTable.setDelegate(self)
         ShoppingCartTable.setDataSource(self)
@@ -72,12 +74,18 @@ class BuyViewController: NSViewController, NSTableViewDelegate, NSTableViewDataS
     @IBAction func Buying(sender: NSButton) {
         let row = BuyTable.rowForView(sender)
         let cell = BuyTable.viewAtColumn(2, row: row, makeIfNecessary: true) as! NSTableCellView
-        var a: Int32 = 0
-        if cell.identifier == "BuyBookSumCell" {
-            let tmp = cell.subviews[0] as! NSTextField
-            a = tmp.intValue
+        let tmp = cell.subviews[0] as! NSTextField
+        if let a = Int8(tmp.stringValue){
+            if !Core.sharedInstance.buyBook(a, isbn: Core.sharedInstance.books[row].isbn) {
+                let a = NSAlert()
+                a.messageText = "该商品未设置策略，无法添加！"
+                a.runModal()
+            }
+        }else{
+            let a = NSAlert()
+            a.messageText = "您的输入有误，无法添加！"
+            a.runModal()
         }
-        Core.sharedInstance.buyBook(Int8(a), isbn: Core.sharedInstance.books[row].isbn)
         ShoppingCartTable.reloadData()
         PriceSum.stringValue = "总价:"+String(Core.sharedInstance.sales.getTotal())
     }

@@ -15,4 +15,7 @@ class FlatRateStrategy: IPricingStrategy {
     func getSubTotal(i: SaleLineItem) -> Double {
         return Double(i.copies)*(i.prodSpec.price - Double(discountPerItem))
     }
+    func isKindOfClass() ->String{
+        return "减价优惠策略"
+    }
 }

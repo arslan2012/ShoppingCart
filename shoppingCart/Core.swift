@@ -63,7 +63,7 @@ class Core {
         return tmp
     }
     func buyBook(num : Int8, isbn : String)->Bool{
-        if ((getBookByIsbn(isbn)) != nil) {
+        if (PricingStrategyFactory.sharedInstance.strategies[(getBookByIsbn(isbn)?.type)!] != nil) {
             sales.addItem(SaleLineItem(copies: num, prodSpec: getBookByIsbn(isbn)!))
             return true
         }else {

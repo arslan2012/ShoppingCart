@@ -12,4 +12,7 @@ class NoDiscountStrategy: IPricingStrategy {
     func getSubTotal(i: SaleLineItem) -> Double {
         return Double(i.copies)*i.prodSpec.price
     }
+    func isKindOfClass() ->String{
+        return "无优惠策略"
+    }
 }

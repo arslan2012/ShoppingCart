@@ -19,8 +19,6 @@
 		F549D6221C6046F300D70153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549D6211C6046F300D70153 /* ViewController.swift */; };
 		F549D6241C6046F300D70153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F549D6231C6046F300D70153 /* Assets.xcassets */; };
 		F549D6271C6046F300D70153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F549D6251C6046F300D70153 /* Main.storyboard */; settings = {ASSET_TAGS = (indexPath.row, ); }; };
-		F549D6321C6046F300D70153 /* shoppingCartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549D6311C6046F300D70153 /* shoppingCartTests.swift */; };
-		F549D63D1C6046F300D70153 /* shoppingCartUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F549D63C1C6046F300D70153 /* shoppingCartUITests.swift */; };
 		F5C08C7A1C606CCE0088DF0B /* SaleLineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C08C791C606CCE0088DF0B /* SaleLineItem.swift */; };
 		F5C08C7C1C608B3F0088DF0B /* CopositeStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C08C7B1C608B3F0088DF0B /* CopositeStrategy.swift */; };
 		F5C08C7E1C608DE50088DF0B /* CompositeBestForCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C08C7D1C608DE50088DF0B /* CompositeBestForCustomer.swift */; };
@@ -28,23 +26,6 @@
 		F5C08C821C609B2C0088DF0B /* PricingStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C08C811C609B2C0088DF0B /* PricingStrategyFactory.swift */; };
 		F5C08C841C609DB10088DF0B /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C08C831C609DB10088DF0B /* Core.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F549D62E1C6046F300D70153 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F549D6141C6046F300D70153 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F549D61B1C6046F300D70153;
-			remoteInfo = shoppingCart;
-		};
-		F549D6391C6046F300D70153 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F549D6141C6046F300D70153 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F549D61B1C6046F300D70153;
-			remoteInfo = shoppingCart;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F51119BC1C6062670081E12B /* IPricingStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPricingStrategy.swift; sourceTree = "<group>"; };
@@ -61,12 +42,6 @@
 		F549D6231C6046F300D70153 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F549D6261C6046F300D70153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F549D6281C6046F300D70153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F549D62D1C6046F300D70153 /* shoppingCartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shoppingCartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F549D6311C6046F300D70153 /* shoppingCartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingCartTests.swift; sourceTree = "<group>"; };
-		F549D6331C6046F300D70153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F549D6381C6046F300D70153 /* shoppingCartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = shoppingCartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F549D63C1C6046F300D70153 /* shoppingCartUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shoppingCartUITests.swift; sourceTree = "<group>"; };
-		F549D63E1C6046F300D70153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5C08C791C606CCE0088DF0B /* SaleLineItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleLineItem.swift; sourceTree = "<group>"; };
 		F5C08C7B1C608B3F0088DF0B /* CopositeStrategy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopositeStrategy.swift; sourceTree = "<group>"; };
 		F5C08C7D1C608DE50088DF0B /* CompositeBestForCustomer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeBestForCustomer.swift; sourceTree = "<group>"; };
@@ -83,20 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F549D62A1C6046F300D70153 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F549D6351C6046F300D70153 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -104,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				F549D61E1C6046F300D70153 /* shoppingCart */,
-				F549D6301C6046F300D70153 /* shoppingCartTests */,
-				F549D63B1C6046F300D70153 /* shoppingCartUITests */,
 				F549D61D1C6046F300D70153 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,8 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				F549D61C1C6046F300D70153 /* shoppingCart.app */,
-				F549D62D1C6046F300D70153 /* shoppingCartTests.xctest */,
-				F549D6381C6046F300D70153 /* shoppingCartUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,24 +103,6 @@
 			path = shoppingCart;
 			sourceTree = "<group>";
 		};
-		F549D6301C6046F300D70153 /* shoppingCartTests */ = {
-			isa = PBXGroup;
-			children = (
-				F549D6311C6046F300D70153 /* shoppingCartTests.swift */,
-				F549D6331C6046F300D70153 /* Info.plist */,
-			);
-			path = shoppingCartTests;
-			sourceTree = "<group>";
-		};
-		F549D63B1C6046F300D70153 /* shoppingCartUITests */ = {
-			isa = PBXGroup;
-			children = (
-				F549D63C1C6046F300D70153 /* shoppingCartUITests.swift */,
-				F549D63E1C6046F300D70153 /* Info.plist */,
-			);
-			path = shoppingCartUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,42 +123,6 @@
 			productReference = F549D61C1C6046F300D70153 /* shoppingCart.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F549D62C1C6046F300D70153 /* shoppingCartTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F549D6441C6046F300D70153 /* Build configuration list for PBXNativeTarget "shoppingCartTests" */;
-			buildPhases = (
-				F549D6291C6046F300D70153 /* Sources */,
-				F549D62A1C6046F300D70153 /* Frameworks */,
-				F549D62B1C6046F300D70153 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F549D62F1C6046F300D70153 /* PBXTargetDependency */,
-			);
-			name = shoppingCartTests;
-			productName = shoppingCartTests;
-			productReference = F549D62D1C6046F300D70153 /* shoppingCartTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F549D6371C6046F300D70153 /* shoppingCartUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F549D6471C6046F300D70153 /* Build configuration list for PBXNativeTarget "shoppingCartUITests" */;
-			buildPhases = (
-				F549D6341C6046F300D70153 /* Sources */,
-				F549D6351C6046F300D70153 /* Frameworks */,
-				F549D6361C6046F300D70153 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F549D63A1C6046F300D70153 /* PBXTargetDependency */,
-			);
-			name = shoppingCartUITests;
-			productName = shoppingCartUITests;
-			productReference = F549D6381C6046F300D70153 /* shoppingCartUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -235,14 +138,6 @@
 				TargetAttributes = {
 					F549D61B1C6046F300D70153 = {
 						CreatedOnToolsVersion = 7.2;
-					};
-					F549D62C1C6046F300D70153 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = F549D61B1C6046F300D70153;
-					};
-					F549D6371C6046F300D70153 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = F549D61B1C6046F300D70153;
 					};
 				};
 			};
@@ -260,8 +155,6 @@
 			projectRoot = "";
 			targets = (
 				F549D61B1C6046F300D70153 /* shoppingCart */,
-				F549D62C1C6046F300D70153 /* shoppingCartTests */,
-				F549D6371C6046F300D70153 /* shoppingCartUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,20 +166,6 @@
 			files = (
 				F549D6241C6046F300D70153 /* Assets.xcassets in Resources */,
 				F549D6271C6046F300D70153 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F549D62B1C6046F300D70153 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F549D6361C6046F300D70153 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,36 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F549D6291C6046F300D70153 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F549D6321C6046F300D70153 /* shoppingCartTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F549D6341C6046F300D70153 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F549D63D1C6046F300D70153 /* shoppingCartUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F549D62F1C6046F300D70153 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F549D61B1C6046F300D70153 /* shoppingCart */;
-			targetProxy = F549D62E1C6046F300D70153 /* PBXContainerItemProxy */;
-		};
-		F549D63A1C6046F300D70153 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F549D61B1C6046F300D70153 /* shoppingCart */;
-			targetProxy = F549D6391C6046F300D70153 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F549D6251C6046F300D70153 /* Main.storyboard */ = {
@@ -463,58 +313,6 @@
 			};
 			name = Release;
 		};
-		F549D6451C6046F300D70153 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = shoppingCartTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Arslan.shoppingCartTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shoppingCart.app/Contents/MacOS/shoppingCart";
-			};
-			name = Debug;
-		};
-		F549D6461C6046F300D70153 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = shoppingCartTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Arslan.shoppingCartTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/shoppingCart.app/Contents/MacOS/shoppingCart";
-			};
-			name = Release;
-		};
-		F549D6481C6046F300D70153 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = shoppingCartUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Arslan.shoppingCartUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = shoppingCart;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		F549D6491C6046F300D70153 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = shoppingCartUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Arslan.shoppingCartUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = shoppingCart;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -532,24 +330,6 @@
 			buildConfigurations = (
 				F549D6421C6046F300D70153 /* Debug */,
 				F549D6431C6046F300D70153 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F549D6441C6046F300D70153 /* Build configuration list for PBXNativeTarget "shoppingCartTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F549D6451C6046F300D70153 /* Debug */,
-				F549D6461C6046F300D70153 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F549D6471C6046F300D70153 /* Build configuration list for PBXNativeTarget "shoppingCartUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F549D6481C6046F300D70153 /* Debug */,
-				F549D6491C6046F300D70153 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -27,4 +27,7 @@ class CompositeBestForCustomer: CopositeStrategy {
         }
         return min
     }
+    func isKindOfClass() ->String{
+        return "组合策略"
+    }
 }

@@ -9,4 +9,5 @@
 import Foundation
 protocol IPricingStrategy{
     func getSubTotal(i: SaleLineItem) ->Double
+    func isKindOfClass() ->String
 }
