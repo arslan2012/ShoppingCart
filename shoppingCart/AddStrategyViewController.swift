@@ -43,7 +43,7 @@ class AddStrategyViewController: NSViewController, NSTableViewDelegate, NSTableV
     }
     @IBAction func ComplexSubmit(sender: NSButton) {
         var tmp = [IPricingStrategy]()
-        for var i = 0;i < PricingStrategyFactory.sharedInstance.strategies.count; i++ {
+        for i in 0 ..< PricingStrategyFactory.sharedInstance.strategies.count {
             let cell = ComplexStratTable.viewAtColumn(0, row: i, makeIfNecessary: true) as! NSTableCellView
             let tmpButton = cell.subviews[0] as! NSButton
             if tmpButton.state == NSOnState {

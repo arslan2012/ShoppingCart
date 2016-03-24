@@ -15,7 +15,7 @@ class Sale {
     func addItem(i : SaleLineItem){
         var index = 0
         for item in items{
-            index++
+            index += 1
             if item.prodSpec.isbn == i.prodSpec.isbn {
                 item.copies += i.copies
                 return
